@@ -16,7 +16,7 @@
 
 <body class="bg-emerald-800">
     <!-- ________________________Navbar_________________________ -->
-    <header class="sticky top-0 bg-emerald-800 z-1000 position">
+    <header class="sticky top-0 bg-emerald-800 backdrop-blur-xl z-1000 position">
 
         <div class="pt-6 pb-10 bg-gray-200">
             <div class="w-[1440px] mx-auto">
@@ -55,15 +55,15 @@
     <!-- ________________________Body/ Main_________________________ -->
     <main class="w-[1440px] mx-auto">
 
-        <!------------------------- Card 1 ------------------------>
+        <!--------------- Card 1 ----------------->
         <div class="mt-8 ">
             <div class="flex gap-8 p-8 bg-gray-200 rounded-xl">
                 <img src="./images/noakhali.png" alt="" />
                 <div>
                     <!-- balance -->
-                    <div id="card-main-balance" class="flex items-center justify-center gap-1 px-5 py-2 bg-cyan-800 border-[1px] border-yellow-300 rounded-md w-30">
+                    <div class="flex items-center justify-center gap-3 px-5 py-2 bg-sky-200 border-[1px] border-black rounded-md ">
                         <img src="./images/coin.png" alt="" />
-                        <h3 class="text-sm font-semibold text-white">0 BDT</h3>
+                        <h3 id="card-main-balance" class="text-lg font-semibold text-black">500 BDT</h3>
                     </div>
                     <!-- Title -->
                     <h2 class="mt-4 text-2xl font-bold text-gray-950">
@@ -72,8 +72,8 @@
                             Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                         <!-- input balance -->
                         <input id="input-amount" class="w-full p-3 font-normal text-green-700 bg-white border border-green-700 rounded-lg mt-7 text-md" type="text" placeholder="Write donation amount">
-
-                        <button id="add-money-btn" class="w-full py-4 mt-5 text-base font-bold text-black rounded-lg cursor-pointer px-7 bg-lime-500 hover:bg-pink-400 hover:text-lg">
+                        <!-- Donation Button -->
+                        <button id="add-money-btn" onclick="updateBalance()" class="w-full py-4 mt-5 text-base font-bold text-black rounded-lg cursor-pointer px-7 bg-lime-500 hover:bg-pink-400 hover:text-lg">
                             Donation
                           </button>
 
@@ -86,19 +86,19 @@
                 <img src="./images/feni.png" alt="" />
                 <div>
                     <!-- balance -->
-                    <div class="flex items-center justify-center gap-1 px-5 py-2 bg-cyan-800 border-[1px] border-yellow-300 rounded-md w-36">
+                    <div class="flex items-center justify-center gap-3 px-5 py-2 bg-sky-200 border-[1px] border-black rounded-md ">
                         <img src="./images/coin.png" alt="" />
-                        <h3 class="text-sm font-semibold text-white">6000 BDT</h3>
+                        <h3 id="card-main-balance" class="text-lg font-semibold text-black">6000 BDT</h3>
                     </div>
                     <!-- Title -->
                     <h2 class="mt-4 text-2xl font-bold text-gray-950">
                         Donate for Flood Relief in Feni,Bangladesh
                         <p class="mt-4 font-normal text-gray-800 text-md "> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference.
                             Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-
-                        <input class="w-full p-3 font-normal text-gray-500 bg-white border border-green-700 rounded-lg mt-7 text-md" type="text" placeholder="Write donation amount">
-
-                        <button class="w-full py-4 mt-5 text-base font-bold text-black rounded-lg cursor-pointer px-7 bg-lime-500 hover:bg-pink-400 hover:text-lg">
+                        <!-- input amount -->
+                        <input id="input-amount" class="w-full p-3 font-normal text-gray-500 bg-white border border-green-700 rounded-lg mt-7 text-md" type="text" placeholder="Write donation amount">
+                        <!-- Donation button -->
+                        <button id="add-money-btn" class="w-full py-4 mt-5 text-base font-bold text-black rounded-lg cursor-pointer px-7 bg-lime-500 hover:bg-pink-400 hover:text-lg">
                             Donation
                           </button>
 
@@ -111,9 +111,9 @@
                 <img src="./images/quota-protest.png" alt="" />
                 <div>
                     <!-- balance -->
-                    <div class="flex items-center justify-center gap-1 px-5 py-2 bg-cyan-800 border-[1px] border-yellow-300 rounded-md w-36">
+                    <div class="flex items-center justify-center gap-3 px-5 py-2 bg-sky-200 border-[1px] border-black rounded-md ">
                         <img src="./images/coin.png" alt="" />
-                        <h3 class="text-sm font-semibold text-white">2500 BDT</h3>
+                        <h3 id="card-main-balance" class="text-lg font-semibold text-black">2500 BDT</h3>
                     </div>
                     <!-- Title -->
                     <h2 class="mt-4 text-2xl font-bold text-gray-950">
