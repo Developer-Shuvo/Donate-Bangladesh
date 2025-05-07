@@ -4,25 +4,29 @@
 // *** update balance into card main balance***  step: 4
 // ***clear input field***  step: 5
 
+// ***Get Add Money Button ***
 document.getElementById("add-money-btn").addEventListener("click", function () {
   // input field amount here
   const givenAmount = document.getElementById("input-amount").value;
-  console.log(givenAmount);
+
+  // Validate the input
+  const addMoneyNumber = parseFloat(givenAmount);
+  if (isNaN(addMoneyNumber) || addMoneyNumber <= 0) {
+    alert("Please enter a valid, positive number.");
+    return;
+  }
 
   // card main balance
-  const cardMainBalance =
-    document.getElementById("card-main-balance").innerText;
-  console.log(cardMainBalance);
+  const cardMainBalance = parseFloat(
+    document.getElementById("card-main-balance").innerText
+  );
 
-  //  const addMoneyNumber = parseFloat(amount);
-  const addMoneyNumber = parseFloat(givenAmount); // Added this line to parse the given amount
-  const balanceNumber = parseFloat(cardMainBalance); // Changed 'balance' to 'cardMainBalance'
-  const newBalance = addMoneyNumber + balanceNumber;
-  console.log(newBalance);
+  // Calculate new balance
+  const newBalance = addMoneyNumber + cardMainBalance;
 
-  // update balance
-  document.getElementById("card-main-balance").innerText = newBalance; // Changed 'car' to 'card-main-balance'
+  // Update balance
+  document.getElementById("card-main-balance").innerText = newBalance;
 
-  // clear input field
+  // Clear input field
   document.getElementById("input-amount").value = "";
 });
