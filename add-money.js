@@ -17,43 +17,13 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
 
   // input field amount here
   const givenAmount = document.getElementById("input-amount").value;
-  // ____________________________________________________________________________________________________
-  // Total main balance calculation
-  const totalMainBalance = parseFloat(
-    document.getElementById("total-main-balance").innerText
-  );
-
-  // Deduct the given amount from the total main balance
-  const updatedTotalMainBalance = totalMainBalance - addMoneyNumber;
-
-  // Check if the total main balance is sufficient
-  if (updatedTotalMainBalance < 0) {
-    document.getElementById("error-message").innerHTML = `
-      <div class="h-[120vh] w-[100%] bg-[#9fabc68b] fixed flex items-center justify-center">
-        <div class="h-[300px] w-[400px] justify-center flex rounded-xl bg-red-700 ">
-          <div class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl text-blue-200 font-bold">Alert !</h1>
-            <h2 class="text-xl font-semibold text-lime-300 mt-8">Insufficient balance in the main account</h2>
-            <h2 class="text-xl font-semibold text-yellow-400">${time}</h2>
-            <!-- button -->
-            <a href='./index.html' class="px-8 py-2 mt-10 text-base font-semibold text-white bg-green-500 rounded cursor-pointer hover:bg-pink-500">Go Back</a>
-          </div>
-        </div>
-      </div>`;
-    return;
-  }
-
-  // Update the total main balance in the DOM
-  document.getElementById("total-main-balance").innerText =
-    updatedTotalMainBalance.toFixed(2);
-  // ____________________________________________________________________________________________________
 
   // Validate the input
   const addMoneyNumber = parseFloat(givenAmount);
   if (isNaN(addMoneyNumber) || addMoneyNumber <= 0) {
     document.getElementById("error-message").innerHTML = `
       <div class="h-[120vh] w-[100%] bg-[#9fabc68b] fixed flex items-center justify-center">
-        <div class="h-[300px] w-[400px] justify-center flex rounded-xl bg-red-700 ">
+        <div class="h-[300px] w-[400px] justify-center flex rounded-xl bg-green-900 ">
           <div class="flex flex-col items-center justify-center">
             <h1 class="text-4xl text-blue-200 font-bold">Alert !</h1>
             <h2 class="text-xl font-semibold text-lime-300 mt-8">Please enter a valid amount</h2>
@@ -79,15 +49,14 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
 
   // Clear input field
   document.getElementById("input-amount").value = "";
-});
 
-//   ___________________________________________________________________________________________________________________
-// _________________________________________Congratulation message_________________________________________
-//
-if (newBalance > 0) {
-  document.getElementById(
-    "congrats-message"
-  ).innerHTML = ` <div id="congrats-overlay" class="h-[120vh] w-[100%] bg-[#bbe8348b] fixed flex items-center justify-center">
+  //   ___________________________________________________________________________________________________________________
+  // _________________________________________Congratulation message_________________________________________
+  //
+  if (newBalance > 0) {
+    document.getElementById(
+      "congrats-message"
+    ).innerHTML = ` <div id="congrats-overlay" class="h-[120vh] w-[100%] bg-[#bbe8348b] fixed flex items-center justify-center">
       <div class="h-[300px] w-[400px] justify-center flex rounded-xl bg-black">
           <div class="flex flex-col items-center justify-center">
               <h1 class="text-2xl font-bold text-sky-400">Congratulations!</h1>
@@ -101,13 +70,14 @@ if (newBalance > 0) {
       </div>
   </div>`;
 
-  // Add event listener to close the congrats message
-  document
-    .getElementById("close-congrats")
-    .addEventListener("click", function () {
-      document.getElementById("congrats-overlay").remove();
-    });
-}
+    // Add event listener to close the congrats message
+    document
+      .getElementById("close-congrats")
+      .addEventListener("click", function () {
+        document.getElementById("congrats-overlay").remove();
+      });
+  }
+});
 
 // ______________________________ ---Card-2--- _______________________________________
 // ***Get Add Money Button ***
