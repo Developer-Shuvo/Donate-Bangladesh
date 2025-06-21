@@ -3,5 +3,5 @@
 add money, and minimize money
 # This is the learning process Vanilla javaScript 
 
-বেসিক জাভাস্ক্রিপ্ট ইউজিং ডোনেশন মডেল
+.....বেসিক জাভাস্ক্রিপ্ট ইউজিং ডোনেশন মডেল.....
 
